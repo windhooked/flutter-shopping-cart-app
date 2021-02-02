@@ -3,7 +3,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_shop_app/models/http_exception.dart';
 import 'package:provider/provider.dart';
-
 import '../providers/auth.dart';
 
 enum AuthMode { Signup, Login }
@@ -23,13 +22,13 @@ class AuthScreen extends StatelessWidget {
           Container(
             decoration: BoxDecoration(
               gradient: LinearGradient(
-                colors: [
-                  Color.fromRGBO(215, 117, 255, 1).withOpacity(0.5),
-                  Color.fromRGBO(255, 188, 117, 1).withOpacity(0.9),
-                ],
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
-                stops: [0, 1],
+               //  colors: [
+               //   Color.fromRGBO(215, 117, 255, 1).withOpacity(0.5),
+               //   Color.fromRGBO(255, 188, 117, 1).withOpacity(0.9),
+               // ],
+              //  stops: [0, 1],
               ),
             ),
           ),
@@ -112,7 +111,8 @@ class _AuthCardState extends State<AuthCard>
   void initState() {
     super.initState();
     _controller =
-        AnimationController(vsync: this, duration: Duration(milliseconds: 300));
+        //AnimationController(vsync: this, duration: Duration(milliseconds: 300));
+        AnimationController( duration: Duration(milliseconds: 300));
     // _heightAnimation = Tween<Size>(
     //         begin: Size(double.infinity, 260), end: Size(double.infinity, 320))
     //     .animate(CurvedAnimation(parent: _controller, curve: Curves.linear));
